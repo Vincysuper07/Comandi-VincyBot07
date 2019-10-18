@@ -5,7 +5,7 @@ class ServStatus(commands.Cog):
       def __init__(self, bot):
             self.bot = bot
       @commands.command()
-      async def stato(self,ctx):
+      async def comandi(self,ctx):
             embed=discord.Embed(title="Lista comandi", description="Prefix: v!", color=0x7289da)
             embed.set_author(name="VincyBot07", icon_url="https://vincybot07.vincysuper07.cf/assets/images/immagine-VincyBot07-rotonda.png")
             embed.add_field(name="Tags", value="v!tag <nome> - Usa un tag!\nv!tags add <nome> <risposta> - Crea un tag!", inline=True)

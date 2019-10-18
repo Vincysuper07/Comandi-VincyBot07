@@ -15,7 +15,7 @@ class ServStatus(commands.Cog):
             embed.add_field(name="Benvenuto", value="v!welcomer <chatincuiappareilmessaggio> <contenutomessaggio> - Da un messaggio di benvenuto  ogni utente che entra nel server", inline=True)
             embed.add_field(name="Moderazione", value="v!purge <numero> - Elimina una quantità da 1 a 100 di messaggi\nv!kick <persona> - Espelle un membro del server\nv!mute <persona> - Muta una persona nel server\nv!unmute <persona> - Smuta una persona nel server\nv!nuke - Eimina tutti i messaggi di una chat\nv!ban <persona> - Banna una persona dal server\nv!unban <persona> - Revoca il ban a una persona del server", inline=True)
             embed.add_field(name="Annunci", value="v!announcement start - crea un annuncio interattivo\nv!announcement quick <canale> [ruolo] <messaggio> - Un vecchio modo per creare un'annuncio", inline=True)
-await ctx.send(embed=embed)
+            await ctx.send(embed=embed)
             
 def setup(bot):
       bot.add_cog(ServStatus(bot))

@@ -7,6 +7,18 @@ class ServStatus(commands.Cog):
       def __init__(self, bot):
             self.bot = bot
             
+      @commands.command(aliases=["stato"])
+      async def statomc(self, ctx):
+            """Mostra lo stato del server Minecraft."""
+            response = await self.bot.session.get("http://vps.vincysuper07.cf/vincystatus/api.php")
+            status = (await response.content.readline()).decode('UTF-8')
+            embed = discord.Embed(title = "Server Minecraft: mc.Vincysuper07.cf", description = f"Al momento il server è {status}")
+            if status == "OFFLINE":
+                embed.color = discord.Color.red()
+            else:
+                embed.color = discord.Color.green()
+            await ctx.send(embed=embed)
+            
       @commands.command()
       async def comandi(self,ctx):
             embed = discord.Embed(title="Tags", description="v!tag <nome> - Usa un tag!\nv!tags add <nome> <risposta> - Crea un tag!", color = discord.Color.green())

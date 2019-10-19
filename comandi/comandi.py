@@ -36,20 +36,6 @@ class ServStatus(commands.Cog):
                 embeds.append(embed)
             session = EmbedPaginatorSession(ctx, *embeds)
             await session.run()
-      @commands.command()
-      async def stato(self, ctx):
-            """Mostra lo stato del server Minecraft."""
-            response = await self.bot.session.get("http://vps.vincysuper07.cf/vincystatus/api.php")
-            status = (await response.content.readline()).decode('UTF-8')
-            embed = discord.Embed(title = "Server Minecraft: mc.Vincysuper07.cf", description = f"Al momento il server è {status}")
-            if status == "OFFLINE":
-                embed.color = discord.Color.red()
-            else:
-                embed.color = discord.Color.green()
-            await ctx.send(embed=embed)
-            
-def setup(bot):
-      bot.add_cog(ServStatus(bot))
             
 def setup(bot):
       bot.add_cog(ServStatus(bot))

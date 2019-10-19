@@ -35,7 +35,7 @@ class ServStatus(commands.Cog):
             embeds = []
             embed_list = [embed, embed1, embed2, embed3, embed4, embed5, embed6]
             for embed in embed_list:
-                embed.set_footer(text="Prefix: v!")
+                embed.set_footer(text=f"Prefix: {ctx.prefix}")
                 embed.set_author(name="VincyBot07", icon_url="https://vincybot07.vincysuper07.cf/assets/images/immagine-VincyBot07-rotonda.png")
                 embeds.append(embed)
             session = EmbedPaginatorSession(ctx, *embeds)

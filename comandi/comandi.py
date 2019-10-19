@@ -21,6 +21,7 @@ class ServStatus(commands.Cog):
             
       @commands.command()
       async def comandi(self,ctx):
+            """Mostra i comandi del bot"""
             embed = discord.Embed(title="Tags", description="v!tag <nome> - Usa un tag!\nv!tags add <nome> <risposta> - Crea un tag!", color = discord.Color.green())
             embed1 = discord.Embed(title="Embed", description="v!embed send <titolo> <Descrizione> - Invia un messaggio incorporato\nv!embed color <hexcode> - Cambia il colore del tuo messaggio incorporato", color = discord.Color.green())
             embed2 = discord.Embed(title="Divertimento", description="v!choose <primo oggetto> <secondo oggetto> Scegli tra 2 oggetti!\nv!roll - Lancia un dado\nv!flip - Lancia una moneta\nv!rps - Sasso, Carta, o Forbici?\nv!8ball <domanda>? - La 8Ball risponderà a ogni tua domanda!\nv!reverse <messaggio> - !otseT out li etrevnI\nv!meme - Ti da una meme a caso\nv!roast <persona> - Insulta la persona menzionata\nv!smallcaps <messaggio> - ᴄᴏɴᴠᴇʀᴛᴇ ɪʟ ᴛᴜᴏ ᴛᴇꜱᴛᴏ ᴀ ᴜɴ ᴍᴀɪᴜꜱᴄᴏʟᴏ ᴘɪᴄᴄᴏʟᴏ!", color = discord.Color.green())

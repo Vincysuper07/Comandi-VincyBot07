@@ -6,6 +6,9 @@ from core.paginator import EmbedPaginatorSession
 class ServStatus(commands.Cog):
       def __init__(self, bot):
             self.bot = bot
+      @commands.Cog.listener()
+      async def on_ready(self, ctx)
+            self.bot.remove_command("help")
             
       @commands.command(aliases=["stato"])
       async def statomc(self, ctx):
@@ -19,7 +22,7 @@ class ServStatus(commands.Cog):
                 embed.color = discord.Color.green()
             await ctx.send(embed=embed)
             
-      @commands.command()
+      @commands.command(aliases=["help"])
       async def comandi(self,ctx):
             """Mostra i comandi del bot"""
             embed = discord.Embed(title="Tags", description="v!tag <nome> - Usa un tag!\nv!tags add <nome> <risposta> - Crea un tag!", color = discord.Color.green())

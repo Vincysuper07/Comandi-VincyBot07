@@ -6,7 +6,7 @@ class ServStatus(commands.Cog):
             self.bot = bot
       @commands.command()
       async def comandi(self,ctx):
-            embed=discord.Embed(title="Lista comandi", description="Prefix: v!", color=0x7289da)
+            embed=discord.Embed(title="Lista comandi", description="Prefix: v!", color = discord.Color.green())
             embed.set_author(name="VincyBot07", icon_url="https://vincybot07.vincysuper07.cf/assets/images/immagine-VincyBot07-rotonda.png")
             embed.add_field(name="Tags", value="v!tag <nome> - Usa un tag!\nv!tags add <nome> <risposta> - Crea un tag!", inline=True)
             embed.add_field(name="Embed", value="v!embed send <titolo> <Descrizione> - Invia un messaggio incorporato\nv!embed color <hexcode> - Cambia il colore del tuo messaggio incorporato", inline=True)

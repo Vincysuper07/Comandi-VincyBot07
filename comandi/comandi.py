@@ -25,7 +25,7 @@ class ServStatus(commands.Cog):
             embed6.set_author(name="VincyBot07", icon_url="https://vincybot07.vincysuper07.cf/assets/images/immagine-VincyBot07-rotonda.png")
             embeds = []
             embed_list = [embed, embed1, embed2, embed3, embed4, embed5, embed6]
-            for embed in embed_list
+            for embed in embed_list:
                 embeds.append(embed)
             session = EmbedPaginatorSession(ctx, *embeds)
             await session.run()

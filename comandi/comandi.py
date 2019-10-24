@@ -6,9 +6,6 @@ from core.paginator import EmbedPaginatorSession
 class ServStatus(commands.Cog):
       def __init__(self, bot):
             self.bot = bot
-      @commands.Cog.listener()
-      async def on_plugin_ready(self, ctx):
-            self.bot.remove_command("help")
             
       @commands.command(aliases=["stato"])
       async def statomc(self, ctx):

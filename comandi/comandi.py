@@ -7,7 +7,7 @@ class ServStatus(commands.Cog):
       def __init__(self, bot):
             self.bot = bot
             
-      @commands.command(aliases=["accetot"]
+      @commands.command(aliases=["accetot"])
       async def accetto(self, ctx):
             """<#595319716344758291>"""
             member = ctx.author

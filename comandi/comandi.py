@@ -7,6 +7,13 @@ class ServStatus(commands.Cog):
       def __init__(self, bot):
             self.bot = bot
             
+      @commands.command(aliases=["accetot"]
+      async def accetto(self, ctx):
+            """<#595319716344758291>"""
+            member = ctx.author
+            role = discord.utils.find(lambda r: r.name == "Membri",ctx.guild.roles)
+            await member.add_roles(role)
+
       @commands.command(aliases=["stato"])
       async def statomc(self, ctx):
             """Mostra lo stato del server Minecraft."""

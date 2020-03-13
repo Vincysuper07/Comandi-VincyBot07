@@ -7,6 +7,18 @@ class ServStatus(commands.Cog):
       def __init__(self, bot):
             self.bot = bot
             
+      @client.event
+      async def on_message(message):
+          if message.content.startswith('$greet'):
+        channel = message.channel
+        await channel.send('Say hello!')
+
+        def check(m):
+            return m.content == 'hello' and m.channel == channel
+
+        msg = await client.wait_for('message', check=check)
+        await channel.send('Hello {.author}!'.format(msg))
+
       @commands.command(aliases=["accetot"])
       async def accetto(self, ctx):
             """<#595319716344758291>"""

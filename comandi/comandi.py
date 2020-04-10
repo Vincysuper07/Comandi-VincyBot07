@@ -20,7 +20,7 @@ class ServStatus(commands.Cog):
             response = await self.bot.session.get("http://vps.vincysuper07.cf/vincystatus/api.php")
             status = (await response.content.readline()).decode('UTF-8')
             embed = discord.Embed(title = "Server Minecraft: mc.Vincysuper07.cf", description = f"Al momento il server è {status}")
-            if status == "OFFLINE":
+            if status == "OFFLINE.":
                 embed.color = discord.Color.red()
             else:
                 embed.color = discord.Color.green()

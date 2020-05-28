@@ -45,6 +45,9 @@ class ServStatus(commands.Cog):
                 embeds.append(embed)
             session = EmbedPaginatorSession(ctx, *embeds)
             await session.run()
-            
+      @commands.command(aliases=["helpmod", "helpm", "hmod", "hadmin", "helpa", "hm"])
+      async def comandi(self,ctx):
+            await ctx.send_help()
+
 def setup(bot):
       bot.add_cog(ServStatus(bot))

@@ -41,10 +41,11 @@ class ServStatus(commands.Cog):
             embed_list = [embed, embed1, embed2, embed3, embed4, embed5, embed6, embed7]
             for embed in embed_list:
                 embed.set_footer(text=f"Usa le frecce per cambiare pagina. • Prefix: {ctx.prefix}")
-                embed.set_author(name="VincyBot07", icon_url="https://vincybot07.vincysuper07.cf/assets/images/immagine-VincyBot07-rotonda.png")
+                embed.set_author(name="VincyBot07", icon_url=self.bot.user.avatar_url)
                 embeds.append(embed)
             session = EmbedPaginatorSession(ctx, *embeds)
             await session.run()
+
       @commands.command(aliases=["helpmod", "helpm", "hmod", "hadmin", "helpa", "hm"])
       async def helpadmin(self,ctx):
             await ctx.send_help()
